@@ -1,0 +1,36 @@
+window.I18N_CA = {
+  skip: 'Saltar al contingut', n1: 'El centre', n2: 'Preus', n3: 'Horari', n4: 'On som', book: 'Reservar',
+  hA: 'Massatge facial a una clienta estirada a la llitera', hint: 'Escriu al vidre',
+  h1: 'Estètica i quiromassatge a Girona', hp: 'Tractaments facials i corporals personalitzats, amb resultats visibles des de la primera sessió.',
+  bookTw: 'Reservar a Treatwell', see: 'Veure preus',
+  ch: 'Bellesa i benestar, sense presses',
+  cp1: 'A Laila cuidem la teva pell i el teu cos amb tractaments avançats i adaptats a tu. Facials, massatges, tractaments corporals, manicura i depilació, en un espai tranquil.',
+  cp2: 'Treballem amb cosmètica professional de Massada i Utsukusy. Som a deu minuts de l’estació de tren de Girona.',
+  cA1: 'L’equip de Laila somrient amb dues targetes regal del centre', cA2: 'Ampolles d’oli de massatge sobre una safata de fusta',
+  ph: 'Preus clars', tabsL: 'Categories', tb0: 'Rostre i mirada', tb1: 'Cos i massatges', tb2: 'Mans i peus',
+  r1: 'Tractament facial clàssic', r2: 'Lifting facial', r3: 'Celles i pestanyes', r4: 'Depilació de celles', r5: 'Depilació de llavi',
+  r6: 'Massatges', r7: 'Tractaments anticel·lulítics', r8: 'Depilació làser',
+  r9: 'Manicura bàsica', r10: 'Manicura semipermanent · 50 min', r11: 'Semipermanent amb reforç', r12: 'Retirar semipermanent', r13: 'Pedicura', from: 'des de',
+  pnote: 'Preus publicats a Treatwell l’octubre de 2026. Confirma’ls en reservar.',
+  hh: 'Horari', hnote: 'Amb cita prèvia. Reserva en línia i tria l’hora que més et convingui.',
+  oh: 'Què diuen de Laila', oG: 'a Google · 53 ressenyes', oT: 'a Treatwell · 95 opinions',
+  d1: 'Adreça', d2: 'Reserves', d2v: 'En línia, a Treatwell', lg1: 'Avís legal', lg2: 'Privacitat', lg3: 'Galetes', lg4: 'Configurar galetes'
+};
+window.I18N_EN = {
+  skip: 'Skip to content', n1: 'The studio', n2: 'Prices', n3: 'Opening hours', n4: 'Find us', book: 'Book',
+  hA: 'Facial massage for a client lying on the treatment bed', hint: 'Write on the glass',
+  h1: 'Beauty and chiromassage in Girona', hp: 'Personalised facial and body treatments, with visible results from the first session.',
+  bookTw: 'Book on Treatwell', see: 'See prices',
+  ch: 'Beauty and wellbeing, unhurried',
+  cp1: 'At Laila we care for your skin and body with advanced treatments tailored to you. Facials, massages, body treatments, manicures and hair removal, in a calm space.',
+  cp2: 'We use professional Massada and Utsukusy skincare. We are ten minutes from Girona train station.',
+  cA1: 'The Laila team smiling with two of the studio’s gift cards', cA2: 'Bottles of massage oil on a wooden tray',
+  ph: 'Clear prices', tabsL: 'Categories', tb0: 'Face and eyes', tb1: 'Body and massage', tb2: 'Hands and feet',
+  r1: 'Classic facial', r2: 'Facial lifting', r3: 'Brows and lashes', r4: 'Eyebrow hair removal', r5: 'Lip hair removal',
+  r6: 'Massages', r7: 'Anti-cellulite treatments', r8: 'Laser hair removal',
+  r9: 'Basic manicure', r10: 'Gel polish manicure · 50 min', r11: 'Gel polish with strengthener', r12: 'Gel polish removal', r13: 'Pedicure', from: 'from',
+  pnote: 'Prices listed on Treatwell in October 2026. Please confirm them when you book.',
+  hh: 'Opening hours', hnote: 'By appointment. Book online and choose the time that suits you.',
+  oh: 'What clients say about Laila', oG: 'on Google · 53 reviews', oT: 'on Treatwell · 95 reviews',
+  d1: 'Address', d2: 'Bookings', d2v: 'Online, on Treatwell', lg1: 'Legal notice', lg2: 'Privacy', lg3: 'Cookies', lg4: 'Cookie settings'
+};

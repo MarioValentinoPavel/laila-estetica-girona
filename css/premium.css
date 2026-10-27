@@ -1,0 +1,21 @@
+/* Kit premium común (lote Girona 2): máscaras de palabras, grano de película, marquesinas y Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+.js:not(.ready) [data-hero], .js:not(.ready) [data-split] { visibility: hidden; }
+.w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .02em .1em; margin: 0 -.02em -.1em; }
+.w-i { display: inline-block; will-change: transform; }
+[data-img] { overflow: hidden; }
+[data-img] img, [data-img] video { transform-origin: 50% 50%; }
+[data-mag] { transition: translate .5s cubic-bezier(.2, .9, .3, 1.2); }
+/* grano de película sobre toda la web */
+.grain::after { content: ""; position: fixed; inset: -50%; z-index: 300; pointer-events: none; opacity: var(--grain, .06);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite; }
+@keyframes grain { 0% { translate: 0 0; } 20% { translate: -4% 3%; } 40% { translate: 3% -5%; } 60% { translate: -6% -2%; } 80% { translate: 5% 4%; } 100% { translate: 0 0; } }
+/* marquesina infinita */
+.mq { overflow: hidden; white-space: nowrap; }
+.mq-t { display: inline-flex; animation: mq var(--mq, 30s) linear infinite; }
+.mq-t > * { flex: none; }
+@keyframes mq { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .grain::after, .mq-t { animation: none; } }
