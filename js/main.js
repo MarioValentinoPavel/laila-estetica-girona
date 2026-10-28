@@ -9,7 +9,7 @@
 
   // ---------- vaho ----------
   function fog() {
-    const hero = document.getElementById('hero'), img = hero.querySelector('.hero-img'), cv = document.getElementById('fog'), word = hero.querySelector('.word');
+    const hero = document.getElementById('glass'), img = hero.querySelector('.hero-img'), cv = document.getElementById('fog');
     const lit = () => hero.classList.add('lit');
     if (reduce || !cv.getContext) { lit(); return; }
     const g = cv.getContext('2d'), M = document.createElement('canvas'), m = M.getContext('2d'), F = document.createElement('canvas'), f = F.getContext('2d');
@@ -30,9 +30,9 @@
       const gr = f.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, 'rgba(239,230,218,.3)'); gr.addColorStop(.55, 'rgba(239,230,218,.5)'); gr.addColorStop(1, 'rgba(239,230,218,.88)');
       f.fillStyle = gr; f.fillRect(0, 0, W, H);
       M.width = Math.ceil(cw / K); M.height = Math.ceil(ch / K); m.fillStyle = '#000'; m.fillRect(0, 0, M.width, M.height);
-      // el nombre se escribe en el vaho justo donde está «Laila» en la maqueta
-      const wr = word.getBoundingClientRect(), cs = getComputedStyle(word), fs = parseFloat(cs.fontSize), dy = typeof gsap !== 'undefined' ? +gsap.getProperty(word, 'y') || 0 : 0;
-      nm = { x: wr.left - r.left, y: wr.top - r.top - dy + wr.height / 2, w: wr.width, font: `300 ${fs / K}px ${cs.fontFamily}`, ls: parseFloat(cs.letterSpacing) || 0 };
+      // el nombre se escribe centrado en la parte de arriba del cristal
+      const fs = Math.min(cw * .34, ch * .3, 300);
+      nm = { x: cw * .5, y: ch * .36, font: '300 ' + (fs / K) + 'px Hahmlet, Georgia, serif', ls: -fs * .03 };
       ready = true; draw();
     };
     const R = () => Math.max(24, Math.min(cw, ch) * .055); // radio del dedo en px CSS
@@ -50,10 +50,10 @@
     const ink = () => {
       m.save(); m.font = nm.font; m.textBaseline = 'middle';
       if ('letterSpacing' in m) m.letterSpacing = `${nm.ls / K}px`;
-      const tw = Math.max(nm.w / K, m.measureText('Laila').width) * 1.06;
-      m.beginPath(); m.rect(0, 0, nm.x / K + tw * pen, M.height); m.clip();
+      const tw = m.measureText('Laila').width, x0 = nm.x / K - tw / 2;
+      m.beginPath(); m.rect(0, 0, x0 + tw * 1.06 * pen, M.height); m.clip();
       m.globalCompositeOperation = 'destination-out'; m.fillStyle = 'rgba(0,0,0,.35)';
-      m.fillText('Laila', nm.x / K, nm.y / K); m.restore();
+      m.fillText('Laila', x0, nm.y / K); m.restore();
     };
     const draw = () => {
       m.fillStyle = 'rgba(0,0,0,.0028)'; m.fillRect(0, 0, M.width, M.height); // el vaho vuelve despacio
@@ -77,7 +77,7 @@
     };
     const start = () => {
       build(); hero.classList.add('fogged'); lit();
-      swipe(.36, .42, .3);
+      swipe(.62, .66, .3);
       (document.fonts ? document.fonts.load(nm.font).catch(() => {}) : Promise.resolve()).then(() => write(1.2));
       requestAnimationFrame(loop);
       // si nadie toca nada, el nombre se vuelve a escribir
@@ -97,7 +97,6 @@
 
   function intro() {
     if (reduce || typeof gsap === 'undefined') return;
-    gsap.fromTo('.word', { opacity: 0, y: 50, filter: 'blur(18px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 2, ease: 'expo.out', delay: .3, clearProps: 'filter' });
   }
 
   // ---------- precios en pestañas ----------
